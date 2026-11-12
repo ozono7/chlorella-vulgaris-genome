@@ -1,9 +1,47 @@
-# Dr. José Juan Torres Martínez
-# R code to regenerate Figures 1, 2a, 3, 4, 5 and S0 of the manuscript
-# "De novo assembly and functional annotation of sequences from a culture
+# Autor: Dr. José Juan Torres Martínez
+# Docente de Ciencias Químicas
+# Universidad Autónoma de San Luis Potosí (UASLP)
+# México
+#
+# Material académico para estudiantes
+# Serie: Artículo Edith — genoma de Chlorella vulgaris (LBCVB)
+#
+# Figuras del artículo para JGEB
+# De novo assembly and functional annotation of sequences from a culture
 # identified as Chlorella vulgaris: genetic potential relevant to wastewater
-# bioremediation" (Journal of Genetic Engineering and Biotechnology).
-# Data: the CSV files in this folder.
+# bioremediation
+#
+# NOTA v3 (2026-11-11): las 6 figuras que genera este script YA ESTÁN
+# GENERADAS y se incluyen en el paquete, en la carpeta figuras/ (PNG, 300 dpi).
+# Este script es el material de reproducibilidad: permite verificar o
+# regenerar esas figuras. NO es una tarea pendiente para nadie.
+# Las figuras que faltan (2b, S1, S2, S3–S11) las produce Edith desde los
+# archivos originales; ver lista-figuras-para-edith.md.
+#
+# Cambios v3: todas las etiquetas en inglés; SIN título ni subtítulo dentro
+# de la imagen (el título va en el pie del manuscrito); estética sobria
+# apta para revista (paleta compatible con visión de color deficiente,
+# tamaños de letra mayores, nombres de género y especie en itálica en los
+# ejes). Las etiquetas de los CSV también pasaron a inglés (son etiquetas
+# categóricas, no mediciones).
+#
+# Qué hace este script
+# Genera, a partir de los valores verificados de ensamblaje y anotación,
+# las figuras que se pueden construir en R sin los archivos
+# originales de salida de cada herramienta:
+#   Figura 1 — Clasificación taxonómica Kraken2 (conteos por taxón)
+#   Figura 2 — Identidad ANIm contra el panel de referencia (UTEX 395 sin valor)
+#   Figura 3 — Evaluación BUSCO (viridiplantae_odb10, n = 425)
+#   Figura 4 — Anotación estructural y funcional (Funannotate + eggNOG-mapper)
+#   Figura 5 — Distribución COG (solo categorías con conteo reportado)
+#   Figura S0 — Comparación QUAST de los cuatro ensambladores
+#
+# Datos
+# Los CSV de esta carpeta contienen los valores verificados de ensamblaje
+# y anotación que se usan para las figuras. Las categorías
+# COG sin conteo reportado (O, P, C, J, I) no se grafican y se señalan en
+# la Figura 5; el ANI de UTEX 395 no se grafica porque no fue reportado.
+#
 
 Sys.setlocale("LC_ALL", "C.UTF-8")
 
@@ -129,7 +167,7 @@ figura2 <- ggplot(ani, aes(x = ani, y = referencia, fill = grupo)) +
 ggsave("figura2_ani.png", figura2, width = 9, height = 6, dpi = 300, bg = "white")
 
 # ---------------------------------------------------------------------------
-# Figura 3. Evaluación BUSCO (chlorophyta_odb10, n = 425)
+# Figura 3. Evaluación BUSCO (viridiplantae_odb10, n = 425)
 # ---------------------------------------------------------------------------
 busco <- read_csv("datos_busco.csv", show_col_types = FALSE) %>%
   mutate(
@@ -180,8 +218,8 @@ ggsave("figura4_anotacion.png", figura4, width = 9, height = 5, dpi = 300, bg = 
 # ---------------------------------------------------------------------------
 # Figura 5. Distribución COG
 # ---------------------------------------------------------------------------
-# Solo se grafican las categorías con conteo reportado. Las seis categorías
-# con porcentaje pero sin conteo (O, P, C, J, I, M) no se inventan: se
+# Solo se grafican las categorías con conteo reportado. Las cinco categorías
+# con porcentaje pero sin conteo (O, P, C, J, I) no se grafican: se
 # señalan en el pie y en la Tabla 4 del manuscrito.
 cog <- read_csv("datos_cog.csv", show_col_types = FALSE) %>%
   filter(estado == "resuelto") %>%
