@@ -1,0 +1,26 @@
+categoria,codigo,conteo,porcentaje,estado
+Function unknown,S,8315,20.27,resuelto
+Signal transduction mechanisms,T,3285,8.01,resuelto
+Unassigned,—,3121,7.61,resuelto
+Amino acid transport and metabolism,E,3005,7.32,resuelto
+Transcription,K,2994,7.30,resuelto
+Carbohydrate transport and metabolism,G,2445,5.96,resuelto
+Replication recombination and repair,L,2295,5.59,resuelto
+Secondary metabolites biosynthesis transport and catabolism,Q,1363,3.32,resuelto
+Coenzyme transport and metabolism,H,1294,3.15,resuelto
+Intracellular trafficking secretion and vesicular transport,U,1198,2.92,resuelto
+Nucleotide transport and metabolism,F,856,2.09,resuelto
+Cell cycle control cell division chromosome partitioning,D,627,1.53,resuelto
+RNA processing and modification,A,590,1.44,resuelto
+Defense mechanisms,V,559,1.36,resuelto
+Cell motility,N,383,0.93,resuelto
+Cytoskeleton,Z,320,0.78,resuelto
+Chromatin structure and dynamics,B,290,0.71,resuelto
+Nuclear structure,Y,78,0.19,resuelto
+Extracellular structures,W,31,0.08,resuelto
+Posttranslational modification protein turnover chaperones,O,NA,5.35,no resuelto
+Inorganic ion transport and metabolism,P,NA,5.23,no resuelto
+Energy production and conversion,C,NA,5.21,no resuelto
+Translation ribosomal structure and biogenesis,J,NA,4.81,no resuelto
+Lipid transport and metabolism,I,NA,4.52,no resuelto
+Cell wall membrane envelope biogenesis,M,NA,4.31,no resuelto

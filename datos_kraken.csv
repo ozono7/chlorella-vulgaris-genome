@@ -1,0 +1,15 @@
+taxon,rango,conteo,precision
+Viridiplantae,Clade,50671528,exact
+Chlorophyta,Phylum,49206966,exact
+Chlamydomonas reinhardtii,Species,49124981,exact
+Streptophyta,Phylum,1410000,approximate
+Bacteria,Domain,18254181,exact
+Pseudomonadota,Phylum,15100000,approximate
+Pseudomonadaceae,Family,8300000,approximate
+Pseudomonas,Genus,8226888,exact
+Methylobacteriaceae,Family,3050000,approximate
+Actinomycetota,Phylum,1510000,approximate
+Sphingomonadaceae/other,Family,781000,combined
+Fungi,Group,17200,approximate
+Archaea,Domain,13500,approximate
+Viruses,Group,2430,approximate

@@ -1,0 +1,8 @@
+etapa,conteo,porcentaje_de,nota
+Total predicted genes,47825,NA,Funannotate
+Protein-coding genes,47192,NA,Funannotate
+Noncoding genes (difference),633,NA,Arithmetic difference 47825-47192
+Functional annotation input,41025,NA,eggNOG-mapper
+COG-associated sequences,37904,92.39,Of 41025
+KEGG-associated sequences,13795,33.62,Of 41025
+GO-associated sequences,4081,9.95,Of 41025
